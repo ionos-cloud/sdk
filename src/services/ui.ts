@@ -34,7 +34,7 @@ function debug(msg: string) {
     if (process.stderr.isTTY) {
       process.stderr.write(`${indent}${chalk.gray('⇢ (debug)')} ${chalk.gray(msg)}\n`)
     } else {
-      process.stderr.write(`${indent}⇢ (debug) msg\n`)
+      process.stderr.write(`${indent}⇢ (debug) ${msg}\n`)
     }
   }
 }
