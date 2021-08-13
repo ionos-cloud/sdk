@@ -19,7 +19,7 @@ $ npm install -g @ionos-cloud/sdk
 $ sdk COMMAND
 running command...
 $ sdk (-v|--version|version)
-@ionos-cloud/sdk/1.0.0 darwin-x64 node-v16.0.0
+@ionos-cloud/sdk/1.0.1 darwin-x64 node-v16.0.0
 $ sdk --help [COMMAND]
 USAGE
   $ sdk COMMAND
@@ -48,7 +48,7 @@ OPTIONS
   -h, --help   show CLI help
 ```
 
-_See code: [src/commands/cache.ts](https://github.com/ionos-cloud/sdk/blob/v1.0.0/src/commands/cache.ts)_
+_See code: [src/commands/cache.ts](https://github.com/ionos-cloud/sdk/blob/v1.0.1/src/commands/cache.ts)_
 
 ## `sdk generate`
 
@@ -70,7 +70,7 @@ OPTIONS
   -v, --version=version        (required) sdk version
 ```
 
-_See code: [src/commands/generate.ts](https://github.com/ionos-cloud/sdk/blob/v1.0.0/src/commands/generate.ts)_
+_See code: [src/commands/generate.ts](https://github.com/ionos-cloud/sdk/blob/v1.0.1/src/commands/generate.ts)_
 
 ## `sdk help [COMMAND]`
 
