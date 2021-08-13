@@ -15,49 +15,70 @@ Ionos Cloud SDK generator
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g @ionos-cloud/sdkgen
-$ sdkgen COMMAND
+$ npm install -g @ionos-cloud/sdk
+$ sdk COMMAND
 running command...
-$ sdkgen (-v|--version|version)
-@ionos-cloud/sdkgen/0.0.1 darwin-x64 node-v16.0.0
-$ sdkgen --help [COMMAND]
+$ sdk (-v|--version|version)
+@ionos-cloud/sdk/1.0.0 darwin-x64 node-v16.0.0
+$ sdk --help [COMMAND]
 USAGE
-  $ sdkgen COMMAND
+  $ sdk COMMAND
 ...
 ```
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`sdkgen hello [FILE]`](#sdkgen-hello-file)
-* [`sdkgen help [COMMAND]`](#sdkgen-help-command)
+* [`sdk cache OPERATION`](#sdk-cache-operation)
+* [`sdk generate`](#sdk-generate)
+* [`sdk help [COMMAND]`](#sdk-help-command)
 
-## `sdkgen hello [FILE]`
+## `sdk cache OPERATION`
 
 describe the command here
 
 ```
 USAGE
-  $ sdkgen hello [FILE]
+  $ sdk cache OPERATION
+
+ARGUMENTS
+  OPERATION  (clear|info) cache operation to perform
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-
-EXAMPLE
-  $ sdkgen hello
-  hello world from ./src/hello.ts!
+  -d, --debug  show debug information
+  -h, --help   show CLI help
 ```
 
-_See code: [src/commands/hello.ts](https://github.com/ionos-cloud/sdkgen/blob/v0.0.1/src/commands/hello.ts)_
+_See code: [src/commands/cache.ts](https://github.com/ionos-cloud/sdk/blob/v1.0.0/src/commands/cache.ts)_
 
-## `sdkgen help [COMMAND]`
+## `sdk generate`
 
-display help for sdkgen
+Generates an Ionos Cloud SDK
 
 ```
 USAGE
-  $ sdkgen help [COMMAND]
+  $ sdk generate
+
+OPTIONS
+  -a, --assets-dir=assets-dir  sdk assets directory (templates, scripts etc)
+  -b, --build                  also build the sdk with the build.sh script
+  -c, --no-cache               don't use the cache
+  -d, --debug                  show debug information
+  -h, --help                   show CLI help
+  -n, --name=name              (required) sdk to build
+  -o, --output-dir=output-dir  output dir
+  -s, --spec=spec              (required) api spec
+  -v, --version=version        (required) sdk version
+```
+
+_See code: [src/commands/generate.ts](https://github.com/ionos-cloud/sdk/blob/v1.0.0/src/commands/generate.ts)_
+
+## `sdk help [COMMAND]`
+
+display help for sdk
+
+```
+USAGE
+  $ sdk help [COMMAND]
 
 ARGUMENTS
   COMMAND  command to show help for

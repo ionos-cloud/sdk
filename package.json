@@ -1,18 +1,19 @@
 {
-  "name": "@ionos-cloud/sdkgen",
-  "description": "Ionos Cloud SDK generator",
-  "version": "0.0.1",
+  "name": "@ionos-cloud/sdk",
+  "description": "Ionos Cloud SDK tool",
+  "version": "1.0.0",
   "author": "Florin Mihalache",
   "bin": {
-    "sdkgen": "./bin/run"
+    "sdk": "./bin/run"
   },
-  "bugs": "https://github.com/ionos-cloud/sdkgen/issues",
+  "bugs": "https://github.com/ionos-cloud/sdk/issues",
   "devDependencies": {
     "@oclif/dev-cli": "^1.26.0",
     "@oclif/test": "^1.2.8",
     "@types/chai": "^4.2.21",
     "@types/mocha": "^5.2.7",
     "@types/node": "^10.17.60",
+    "@types/rimraf": "^3.0.1",
     "chai": "^4.3.4",
     "eslint": "^5.16.0",
     "eslint-config-oclif": "^3.1.0",
@@ -24,7 +25,7 @@
     "typescript": "^3.9.10"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=14.0.0"
   },
   "files": [
     "/bin",
@@ -32,7 +33,7 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/ionos-cloud/sdkgen",
+  "homepage": "https://github.com/ionos-cloud/sdk",
   "keywords": [
     "oclif"
   ],
@@ -40,15 +41,17 @@
   "main": "lib/index.js",
   "oclif": {
     "commands": "./lib/commands",
-    "bin": "sdkgen",
+    "bin": "sdk",
     "plugins": [
       "@oclif/plugin-help"
     ]
   },
-  "repository": "ionos-cloud/sdkgen",
+  "repository": "ionos-cloud/sdk",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
+    "lint": "eslint . --ext .ts --config .eslintrc",
+    "build": "rm -rf lib && tsc -b",
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
     "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif-dev readme && git add README.md"
@@ -58,6 +61,10 @@
     "@oclif/command": "^1.8.0",
     "@oclif/config": "^1.17.0",
     "@oclif/plugin-help": "^3.2.2",
-    "tslib": "^1.14.1"
+    "axios": "^0.21.1",
+    "execa": "^5.1.1",
+    "rimraf": "^2.6.3",
+    "tslib": "^1.14.1",
+    "yaml": "^1.10.2"
   }
 }

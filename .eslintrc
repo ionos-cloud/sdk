@@ -2,5 +2,23 @@
   "extends": [
     "oclif",
     "oclif-typescript"
-  ]
+  ],
+  "rules": {
+    "comma-dangle": "off",
+    "indent": ["error", 2, {
+      "SwitchCase": 1
+    }],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": "off",
+    "object-curly-spacing": "off",
+    "lines-between-class-members": "off",
+    "padded-blocks": "off",
+    "no-trailing-spaces": "off",
+    "eol-last": "off",
+    "array-bracket-spacing": "off",
+    "no-process-exit": "off",
+    "unicorn/no-process-exit": "off",
+    "array-element-newline": "off"
+  }
 }
