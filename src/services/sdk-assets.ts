@@ -15,7 +15,7 @@ import { GenConfig } from '../models/gen-config'
 
 import helpers from '../helpers'
 
-const SDK_ASSETS_VARS_FILE = 'config/vars.yaml'
+const SDK_ASSETS_VARS_FILE = 'config/setup.yaml'
 const SDK_ASSETS_OPENAPI_CONFIG_FILE = 'config/openapi.yaml'
 
 const SDK_VAR_NOT_FOUND_TAG = '<!sdk_var_not_found>'
