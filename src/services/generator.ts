@@ -44,14 +44,17 @@ export class Generator {
     ui.info('running pre-gen script')
     await this.sdkAssets.runPreGenScript()
 
+    const openApiGen = new OpenApiGen(this.genConfig, this.sdkAssets,
+      this.genConfig.noCache ? undefined : this.fileCache)
+    this.sdkAssets.shellEnv.IONOS_SDK_JAR_PATH = await openApiGen.getJarPath()
+
     if (this.sdkAssets.hasGenScript()) {
       ui.info('running generate script')
       await this.sdkAssets.runGenScript()
     } else {
       /* open api default run */
       ui.info('running openapi-generator')
-      const openApiGen = new OpenApiGen(this.genConfig, this.sdkAssets,
-        this.genConfig.noCache ? undefined : this.fileCache)
+
       await openApiGen.run()
     }
 

@@ -10,8 +10,20 @@ import {GenConfig} from '../models/gen-config'
 
 export class OpenApiGen {
 
+  protected jarPath: string | undefined = undefined
+
   /* eslint-disable-next-line no-useless-constructor */
-  constructor(protected genConfig: GenConfig, protected sdkAssets: SdkAssets, protected fileCache?: FileCache) { }
+  constructor(protected genConfig: GenConfig, protected sdkAssets: SdkAssets, protected fileCache?: FileCache) {
+  }
+
+  public async getJarPath(): Promise<string> {
+    if (this.jarPath !== undefined) {
+      return this.jarPath
+    }
+
+    this.jarPath = await this.fetchJar(this.sdkAssets.getVars().get('openApiGeneratorJar'))
+    return this.jarPath
+  }
 
   public async run() {
 
@@ -28,7 +40,7 @@ export class OpenApiGen {
     const args = [
 
       /* the openapi generator jar */
-      '-jar', await this.fetchJar(vars.get('openApiGeneratorJar')),
+      '-jar', await this.getJarPath(),
 
       'generate',
 

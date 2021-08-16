@@ -43,6 +43,10 @@ export default class Generate extends BaseCommand {
       genConfig.specFile = path.join(process.cwd(), genConfig.specFile)
     }
 
+    if (!genConfig.outputDir.startsWith('/')) {
+      genConfig.outputDir = path.join(process.cwd(), genConfig.outputDir)
+    }
+
     const generator = new Generator(genConfig, new FileCache(this.config.cacheDir))
     await generator.generate()
 

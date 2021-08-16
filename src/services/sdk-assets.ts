@@ -37,7 +37,7 @@ export class SdkAssets {
 
   protected vars: Vars
   protected openApiConfigPath: string
-  protected shellEnv: {[key: string]: string}
+  public shellEnv: {[key: string]: string}
 
   protected defaultVars: {[key: string]: any} = {}
 
@@ -65,11 +65,11 @@ export class SdkAssets {
     )
 
     this.shellEnv = {
-      SDK_VERSION: genConfig.version,
-      SDK_SPEC: genConfig.specFile,
-      SDK_NAME: genConfig.sdkName,
-      SDK_RESOURCE_DIR: genConfig.assetsDir,
-      SDK_OUTPUT_DIR: genConfig.outputDir,
+      IONOS_SDK_VERSION: genConfig.version,
+      IONOS_SDK_SPEC: genConfig.specFile,
+      IONOS_SDK_NAME: genConfig.sdkName,
+      IONOS_SDK_ASSETS_DIR: genConfig.assetsDir,
+      IONOS_SDK_OUTPUT_DIR: genConfig.outputDir,
       ...this.vars.buildEnvFromVars()
     }
 
@@ -95,7 +95,7 @@ export class SdkAssets {
   }
 
   public async runGenScript() {
-    await this.runScript(path.join(this.genConfig.assetsDir, ...GEN_SCRIPT.split('/')), this.genConfig.outputDir)
+    await this.runScript(path.join(this.genConfig.assetsDir, ...GEN_SCRIPT.split('/')), this.genConfig.assetsDir)
   }
 
   public hasGenScript(): boolean {
