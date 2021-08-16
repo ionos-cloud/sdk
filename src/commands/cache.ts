@@ -3,7 +3,7 @@ import ui from '../services/ui'
 import {FileCache} from '../services/file-cache'
 
 export default class Cache extends BaseCommand {
-  static description = 'describe the command here'
+  static description = 'cache management'
 
   static flags = {
     ...BaseCommand.flags

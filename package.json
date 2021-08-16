@@ -1,12 +1,12 @@
 {
-  "name": "@ionos-cloud/sdk",
+  "name": "@ionos-cloud/ionossdk",
   "description": "Ionos Cloud SDK tool",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Florin Mihalache",
   "bin": {
-    "sdk": "./bin/run"
+    "ionossdk": "./bin/run"
   },
-  "bugs": "https://github.com/ionos-cloud/sdk/issues",
+  "bugs": "https://github.com/ionos-cloud/ionossdk/issues",
   "devDependencies": {
     "@oclif/dev-cli": "^1.26.0",
     "@oclif/test": "^1.2.8",
@@ -33,20 +33,20 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/ionos-cloud/sdk",
+  "homepage": "https://github.com/ionos-cloud/ionossdk",
   "keywords": [
-    "oclif"
+    "oclif", "sdk", "ionos"
   ],
   "license": "MIT",
   "main": "lib/index.js",
   "oclif": {
     "commands": "./lib/commands",
-    "bin": "sdk",
+    "bin": "ionossdk",
     "plugins": [
       "@oclif/plugin-help"
     ]
   },
-  "repository": "ionos-cloud/sdk",
+  "repository": "ionos-cloud/ionossdk",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",

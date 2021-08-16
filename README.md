@@ -1,12 +1,10 @@
-@ionos-cloud/sdkgen
+@ionos-cloud/ionossdk
 ===================
 
 Ionos Cloud SDK generator
 
-[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/@ionos-cloud/sdkgen.svg)](https://npmjs.org/package/@ionos-cloud/sdkgen)
-[![Downloads/week](https://img.shields.io/npm/dw/@ionos-cloud/sdkgen.svg)](https://npmjs.org/package/@ionos-cloud/sdkgen)
-[![License](https://img.shields.io/npm/l/@ionos-cloud/sdkgen.svg)](https://github.com/ionos-cloud/sdkgen/blob/master/package.json)
+[![Version](https://img.shields.io/npm/v/@ionos-cloud/ionossdk.svg)](https://npmjs.org/package/@ionos-cloud/ionossdk)
+[![License](https://img.shields.io/npm/l/@ionos-cloud/ionossdk.svg)](https://github.com/ionos-cloud/ionossdk/blob/master/package.json)
 
 <!-- toc -->
 * [Usage](#usage)
@@ -15,30 +13,30 @@ Ionos Cloud SDK generator
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g @ionos-cloud/sdk
-$ sdk COMMAND
+$ npm install -g @ionos-cloud/ionossdk
+$ ionossdk COMMAND
 running command...
-$ sdk (-v|--version|version)
-@ionos-cloud/sdk/1.0.2 darwin-x64 node-v16.0.0
-$ sdk --help [COMMAND]
+$ ionossdk (-v|--version|version)
+@ionos-cloud/ionossdk/1.0.2 darwin-x64 node-v16.0.0
+$ ionossdk --help [COMMAND]
 USAGE
-  $ sdk COMMAND
+  $ ionossdk COMMAND
 ...
 ```
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`sdk cache OPERATION`](#sdk-cache-operation)
-* [`sdk generate`](#sdk-generate)
-* [`sdk help [COMMAND]`](#sdk-help-command)
+* [`ionossdk cache OPERATION`](#ionossdk-cache-operation)
+* [`ionossdk generate`](#ionossdk-generate)
+* [`ionossdk help [COMMAND]`](#ionossdk-help-command)
 
-## `sdk cache OPERATION`
+## `ionossdk cache OPERATION`
 
-describe the command here
+cache management
 
 ```
 USAGE
-  $ sdk cache OPERATION
+  $ ionossdk cache OPERATION
 
 ARGUMENTS
   OPERATION  (clear|info) cache operation to perform
@@ -48,15 +46,15 @@ OPTIONS
   -h, --help   show CLI help
 ```
 
-_See code: [src/commands/cache.ts](https://github.com/ionos-cloud/sdk/blob/v1.0.2/src/commands/cache.ts)_
+_See code: [src/commands/cache.ts](https://github.com/ionos-cloud/ionossdk/blob/v1.0.2/src/commands/cache.ts)_
 
-## `sdk generate`
+## `ionossdk generate`
 
 Generates an Ionos Cloud SDK
 
 ```
 USAGE
-  $ sdk generate
+  $ ionossdk generate
 
 OPTIONS
   -a, --assets-dir=assets-dir  sdk assets directory (templates, scripts etc)
@@ -70,15 +68,15 @@ OPTIONS
   -v, --version=version        (required) sdk version
 ```
 
-_See code: [src/commands/generate.ts](https://github.com/ionos-cloud/sdk/blob/v1.0.2/src/commands/generate.ts)_
+_See code: [src/commands/generate.ts](https://github.com/ionos-cloud/ionossdk/blob/v1.0.2/src/commands/generate.ts)_
 
-## `sdk help [COMMAND]`
+## `ionossdk help [COMMAND]`
 
-display help for sdk
+display help for ionossdk
 
 ```
 USAGE
-  $ sdk help [COMMAND]
+  $ ionossdk help [COMMAND]
 
 ARGUMENTS
   COMMAND  command to show help for
