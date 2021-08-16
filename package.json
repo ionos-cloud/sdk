@@ -1,7 +1,7 @@
 {
   "name": "@ionos-cloud/ionossdk",
   "description": "Ionos Cloud SDK tool",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Florin Mihalache",
   "bin": {
     "ionossdk": "./bin/run"
@@ -35,7 +35,9 @@
   ],
   "homepage": "https://github.com/ionos-cloud/ionossdk",
   "keywords": [
-    "oclif", "sdk", "ionos"
+    "oclif",
+    "sdk",
+    "ionos"
   ],
   "license": "MIT",
   "main": "lib/index.js",
