@@ -17,7 +17,7 @@ $ npm install -g @ionos-cloud/ionossdk
 $ ionossdk COMMAND
 running command...
 $ ionossdk (-v|--version|version)
-@ionos-cloud/ionossdk/1.1.0 darwin-x64 node-v16.0.0
+@ionos-cloud/ionossdk/1.2.0 darwin-x64 node-v16.0.0
 $ ionossdk --help [COMMAND]
 USAGE
   $ ionossdk COMMAND
@@ -27,9 +27,9 @@ USAGE
 # Commands
 <!-- commands -->
 * [`ionossdk cache OPERATION`](#ionossdk-cache-operation)
+* [`ionossdk env`](#ionossdk-env)
 * [`ionossdk generate`](#ionossdk-generate)
 * [`ionossdk help [COMMAND]`](#ionossdk-help-command)
-* [`ionossdk test [FILE]`](#ionossdk-test-file)
 
 ## `ionossdk cache OPERATION`
 
@@ -47,7 +47,27 @@ OPTIONS
   -h, --help   show CLI help
 ```
 
-_See code: [src/commands/cache.ts](https://github.com/ionos-cloud/ionossdk/blob/v1.1.0/src/commands/cache.ts)_
+_See code: [src/commands/cache.ts](https://github.com/ionos-cloud/ionossdk/blob/v1.2.0/src/commands/cache.ts)_
+
+## `ionossdk env`
+
+Build ENV variables from an assets bundle
+
+```
+USAGE
+  $ ionossdk env
+
+OPTIONS
+  -a, --assets-dir=assets-dir  (required) sdk assets directory (templates, scripts etc)
+  -d, --debug                  show debug information
+  -h, --help                   show CLI help
+  -n, --name=name              (required) sdk to build
+  -o, --output-dir=output-dir  output dir
+  -s, --spec=spec              [default: none.json] api spec
+  -v, --version=version        [default: 0.0.0] sdk version
+```
+
+_See code: [src/commands/env.ts](https://github.com/ionos-cloud/ionossdk/blob/v1.2.0/src/commands/env.ts)_
 
 ## `ionossdk generate`
 
@@ -69,7 +89,7 @@ OPTIONS
   -v, --version=version        (required) sdk version
 ```
 
-_See code: [src/commands/generate.ts](https://github.com/ionos-cloud/ionossdk/blob/v1.1.0/src/commands/generate.ts)_
+_See code: [src/commands/generate.ts](https://github.com/ionos-cloud/ionossdk/blob/v1.2.0/src/commands/generate.ts)_
 
 ## `ionossdk help [COMMAND]`
 
@@ -87,20 +107,4 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
-
-## `ionossdk test [FILE]`
-
-describe the command here
-
-```
-USAGE
-  $ ionossdk test [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-```
-
-_See code: [src/commands/test.ts](https://github.com/ionos-cloud/ionossdk/blob/v1.1.0/src/commands/test.ts)_
 <!-- commandsstop -->
