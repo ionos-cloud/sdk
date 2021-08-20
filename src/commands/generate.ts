@@ -3,7 +3,6 @@ import BaseCommand from '../base/base-command'
 import { GenConfig } from '../models/gen-config'
 
 import { Generator } from '../services/generator'
-import * as path from 'path'
 import {FileCache} from '../services/file-cache'
 
 export default class Generate extends BaseCommand {

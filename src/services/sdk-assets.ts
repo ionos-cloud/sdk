@@ -30,7 +30,6 @@ const PREGEN_SCRIPT = `${SCRIPTS_D}/pre-gen.sh`
 const POSTGEN_SCRIPT = `${SCRIPTS_D}/post-gen.sh`
 const GEN_SCRIPT = `${SCRIPTS_D}/generate.sh`
 const BUILD_SCRIPT = `${SCRIPTS_D}/build.sh`
-const TEST_SCRIPT = `${SCRIPTS_D}/test.sh`
 
 const DEFAULT_REPO_OWNER = 'ionos-cloud'
 
