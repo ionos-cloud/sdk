@@ -35,17 +35,7 @@ export default class Generate extends BaseCommand {
     genConfig.noCache = this.flags['no-cache']
 
     /* convert to absolute paths to avoid errors when changing dirs to run commands */
-    if (!genConfig.assetsDir.startsWith('/')) {
-      genConfig.assetsDir = path.join(process.cwd(), genConfig.assetsDir)
-    }
-
-    if (!genConfig.specFile.startsWith('/')) {
-      genConfig.specFile = path.join(process.cwd(), genConfig.specFile)
-    }
-
-    if (!genConfig.outputDir.startsWith('/')) {
-      genConfig.outputDir = path.join(process.cwd(), genConfig.outputDir)
-    }
+    genConfig.forceAbsPaths()
 
     const generator = new Generator(genConfig, new FileCache(this.config.cacheDir))
     await generator.generate()

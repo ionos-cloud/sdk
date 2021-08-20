@@ -30,6 +30,7 @@ const PREGEN_SCRIPT = `${SCRIPTS_D}/pre-gen.sh`
 const POSTGEN_SCRIPT = `${SCRIPTS_D}/post-gen.sh`
 const GEN_SCRIPT = `${SCRIPTS_D}/generate.sh`
 const BUILD_SCRIPT = `${SCRIPTS_D}/build.sh`
+const TEST_SCRIPT = `${SCRIPTS_D}/test.sh`
 
 const DEFAULT_REPO_OWNER = 'ionos-cloud'
 
@@ -48,9 +49,9 @@ export class SdkAssets {
       outputDir: genConfig.outputDir,
       httpUserAgent: `ionos-cloud-sdk-${genConfig.sdkName}/v${genConfig.version}`,
       packageName: 'ionoscloud',
-      repoId: `sdk-${genConfig.sdkName}`,
+      repoId: `${genConfig.sdkName}`,
       repoOwner: DEFAULT_REPO_OWNER,
-      repo: `https://github.com/${DEFAULT_REPO_OWNER}/sdk-${genConfig.sdkName}`,
+      repo: `https://github.com/${DEFAULT_REPO_OWNER}/${genConfig.sdkName}`,
       openApiGeneratorJar: '/tmp/openapi-generator.jar',
       openApiLang: genConfig.sdkName,
       openApiGlobalProperty: '',
@@ -76,13 +77,17 @@ export class SdkAssets {
     this.openApiConfigPath = this.generateOpenApiConfig()
   }
 
+  public getEnv(): {[key: string]: any} {
+    return this.shellEnv
+  }
+
   public getVars(): Vars {
     return this.vars
   }
 
-  protected async runScript(script: string, cwd = process.cwd()) {
+  protected async runScript(script: string, cwd = process.cwd(), env = {}) {
     if (fs.existsSync(script)) {
-      await helpers.command.run(script, [ ], { env: this.shellEnv, execaOpts: { cwd } })
+      await helpers.command.run(script, [ ], { env: {...this.shellEnv, ...env}, execaOpts: { cwd } })
     }
   }
 

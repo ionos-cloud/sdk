@@ -29,6 +29,7 @@ USAGE
 * [`ionossdk cache OPERATION`](#ionossdk-cache-operation)
 * [`ionossdk generate`](#ionossdk-generate)
 * [`ionossdk help [COMMAND]`](#ionossdk-help-command)
+* [`ionossdk test [FILE]`](#ionossdk-test-file)
 
 ## `ionossdk cache OPERATION`
 
@@ -86,4 +87,20 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
+
+## `ionossdk test [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ ionossdk test [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/test.ts](https://github.com/ionos-cloud/ionossdk/blob/v1.1.0/src/commands/test.ts)_
 <!-- commandsstop -->

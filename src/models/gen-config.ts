@@ -1,3 +1,5 @@
+import * as path from 'path'
+
 export class GenConfig {
   specFile = ''
   version = ''
@@ -6,4 +8,18 @@ export class GenConfig {
   sdkName = ''
   build = true
   noCache = false
+
+  public forceAbsPaths() {
+    if (!this.assetsDir.startsWith('/')) {
+      this.assetsDir = path.join(process.cwd(), this.assetsDir)
+    }
+
+    if (!this.specFile.startsWith('/')) {
+      this.specFile = path.join(process.cwd(), this.specFile)
+    }
+
+    if (!this.outputDir.startsWith('/')) {
+      this.outputDir = path.join(process.cwd(), this.outputDir)
+    }
+  }
 }
