@@ -17,7 +17,7 @@ $ npm install -g @ionos-cloud/ionossdk
 $ ionossdk COMMAND
 running command...
 $ ionossdk (-v|--version|version)
-@ionos-cloud/ionossdk/1.2.0 darwin-x64 node-v16.0.0
+@ionos-cloud/ionossdk/1.2.1 darwin-x64 node-v16.0.0
 $ ionossdk --help [COMMAND]
 USAGE
   $ ionossdk COMMAND
@@ -47,7 +47,7 @@ OPTIONS
   -h, --help   show CLI help
 ```
 
-_See code: [src/commands/cache.ts](https://github.com/ionos-cloud/ionossdk/blob/v1.2.0/src/commands/cache.ts)_
+_See code: [src/commands/cache.ts](https://github.com/ionos-cloud/ionossdk/blob/v1.2.1/src/commands/cache.ts)_
 
 ## `ionossdk env`
 
@@ -67,7 +67,7 @@ OPTIONS
   -v, --version=version        [default: 0.0.0] sdk version
 ```
 
-_See code: [src/commands/env.ts](https://github.com/ionos-cloud/ionossdk/blob/v1.2.0/src/commands/env.ts)_
+_See code: [src/commands/env.ts](https://github.com/ionos-cloud/ionossdk/blob/v1.2.1/src/commands/env.ts)_
 
 ## `ionossdk generate`
 
@@ -89,7 +89,7 @@ OPTIONS
   -v, --version=version        (required) sdk version
 ```
 
-_See code: [src/commands/generate.ts](https://github.com/ionos-cloud/ionossdk/blob/v1.2.0/src/commands/generate.ts)_
+_See code: [src/commands/generate.ts](https://github.com/ionos-cloud/ionossdk/blob/v1.2.1/src/commands/generate.ts)_
 
 ## `ionossdk help [COMMAND]`
 
