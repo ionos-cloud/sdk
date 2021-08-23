@@ -18,9 +18,6 @@ import helpers from '../helpers'
 const SDK_ASSETS_VARS_FILE = 'config/setup.yaml'
 const SDK_ASSETS_OPENAPI_CONFIG_FILE = 'config/openapi.yaml'
 
-const SDK_VAR_NOT_FOUND_TAG = '<!sdk_var_not_found>'
-const ENV_VAR_NOT_FOUND_TAG = '<!env_var_not_found>'
-
 /* directories */
 const SCRIPTS_D = 'scripts'
 const TEMPLATES_D = 'templates'
@@ -130,13 +127,21 @@ export class SdkAssets {
       /* replace {{ vars.* }} tags with variable values */
       .replaceAll(/{{\s*vars\.\w+\s*}}/g, (match: string): string => {
         const varRef = match.substring(2, match.length - 2).trim().split('.')[1]
-        return this.getVars().get(varRef) || SDK_VAR_NOT_FOUND_TAG
+        const val = this.getVars().get(varRef)
+        if (val === undefined) {
+          throw new Error(`variable ${varRef} not found when parsing ${configTplPath}`)
+        }
+        return val
       })
 
       /* replace {{ env.* }} tags with env values */
       .replaceAll(/{{\s*env\.\w+\s*}}/g, (match: string): string => {
         const varRef = match.substring(2, match.length - 2).trim().split('.')[1]
-        return process.env[varRef] || ENV_VAR_NOT_FOUND_TAG
+        const val = process.env[varRef]
+        if (val === undefined) {
+          throw new Error(`env variable ${varRef} not found when parsing file ${configTplPath}`)
+        }
+        return val
       })
 
   }

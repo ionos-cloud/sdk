@@ -17,6 +17,9 @@ export class Vars {
         fs.readFileSync(varsFile).toString()
           .replaceAll(/{{\s*vars.\w+\s*}}/g, (match: string): string => {
             const varRef = match.substring(2, match.length - 2).trim().split('.')[1]
+            if (defaults[varRef] === undefined) {
+              throw new Error(`variable ${varRef} not found when parsing ${varsFile}`)
+            }
             return defaults[varRef] || SDK_VAR_NOT_FOUND_TAG
           })
       ),
