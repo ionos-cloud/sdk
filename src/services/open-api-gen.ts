@@ -58,7 +58,7 @@ export class OpenApiGen {
       args.push('--global-property', globalProperty)
     }
 
-    const additionalProperties = vars.get('additionalProperties')
+    const additionalProperties = vars.get('openApiAdditionalProperties')
     if (additionalProperties !== undefined && additionalProperties.length > 0) {
       args.push('--additional-properties', additionalProperties)
     }
