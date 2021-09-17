@@ -1,3 +1,7 @@
+## 1.2.2
+
+- fix `additionalProperties` functionality
+
 ## 1.2.1
 
 - throwing an error if a variable is not found in `setup.yaml` or `openapi.yaml`
