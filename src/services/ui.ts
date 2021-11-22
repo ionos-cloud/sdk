@@ -1,9 +1,9 @@
-import chalk from 'chalk'
 import runConfig from '../models/run-config'
 import cli from 'cli-ux'
 import * as json from './json'
 
 const indent = ''
+const chalk = require('chalk');
 
 function warning(msg: string) {
   // eslint-disable-next-line no-console

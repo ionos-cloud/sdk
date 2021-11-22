@@ -1,3 +1,8 @@
+## 1.2.3
+
+- use a minimum version for chalk: `v4.1.2`
+- fix ui errors
+
 ## 1.2.2
 
 - fix `additionalProperties` functionality

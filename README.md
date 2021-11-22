@@ -17,7 +17,7 @@ $ npm install -g @ionos-cloud/ionossdk
 $ ionossdk COMMAND
 running command...
 $ ionossdk (-v|--version|version)
-@ionos-cloud/ionossdk/1.2.2 darwin-x64 node-v16.0.0
+@ionos-cloud/ionossdk/1.2.3 darwin-x64 node-v16.0.0
 $ ionossdk --help [COMMAND]
 USAGE
   $ ionossdk COMMAND
