@@ -1,3 +1,7 @@
+## 1.2.4
+
+- add `package` optional flag to be able to pass the package along with the sdk name
+
 ## 1.2.3
 
 - use a minimum version for chalk: `v4.1.2`
