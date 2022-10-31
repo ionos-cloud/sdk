@@ -29,7 +29,7 @@ export default class Env extends BaseCommand {
     genConfig.assetsDir = this.flags['assets-dir'] || '.'
     genConfig.specFile = this.flags.spec
     genConfig.sdkName = this.flags.name
-    genConfig.packageName = this.flags.package
+    genConfig.packageName = this.flags.package || 'ionoscloud'
 
     /* convert to absolute paths to avoid errors when changing dirs to run commands */
     genConfig.forceAbsPaths()

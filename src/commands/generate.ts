@@ -33,7 +33,7 @@ export default class Generate extends BaseCommand {
     genConfig.sdkName = this.flags.name
     genConfig.build = this.flags.build
     genConfig.noCache = this.flags['no-cache']
-    genConfig.packageName = this.flags.packageName
+    genConfig.packageName = this.flags.package || 'ionoscloud'
 
     /* convert to absolute paths to avoid errors when changing dirs to run commands */
     genConfig.forceAbsPaths()
