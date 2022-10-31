@@ -13,6 +13,7 @@ export default class Generate extends BaseCommand {
     spec: flags.string({char: 's', description: 'api spec', required: true}),
     version: flags.string({char: 'v', description: 'sdk version', required: true}),
     name: flags.string({char: 'n', description: 'sdk to build', required: true}),
+    package: flags.string({char: 'p', description: 'sdk package name', required: false}),
     'assets-dir': flags.string({char: 'a', description: 'sdk assets directory (templates, scripts etc)'}),
     'output-dir': flags.string({char: 'o', description: 'output dir'}),
     build: flags.boolean({char: 'b', description: 'also build the sdk with the build.sh script', default: true}),
@@ -32,6 +33,7 @@ export default class Generate extends BaseCommand {
     genConfig.sdkName = this.flags.name
     genConfig.build = this.flags.build
     genConfig.noCache = this.flags['no-cache']
+    genConfig.packageName = this.flags.packageName
 
     /* convert to absolute paths to avoid errors when changing dirs to run commands */
     genConfig.forceAbsPaths()
