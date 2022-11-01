@@ -13,6 +13,7 @@ export default class Env extends BaseCommand {
     spec: flags.string({char: 's', description: 'api spec', required: false, default: 'none.json'}),
     version: flags.string({char: 'v', description: 'sdk version', required: false, default: '0.0.0'}),
     name: flags.string({char: 'n', description: 'sdk to build', required: true}),
+    package: flags.string({char: 'p', description: 'sdk package name', required: false}),
     'assets-dir': flags.string({char: 'a', description: 'sdk assets directory (templates, scripts etc)', required: true}),
     'output-dir': flags.string({char: 'o', description: 'output dir', required: false, default: ''}),
   }
@@ -28,6 +29,7 @@ export default class Env extends BaseCommand {
     genConfig.assetsDir = this.flags['assets-dir'] || '.'
     genConfig.specFile = this.flags.spec
     genConfig.sdkName = this.flags.name
+    genConfig.packageName = this.flags.package || 'ionoscloud'
 
     /* convert to absolute paths to avoid errors when changing dirs to run commands */
     genConfig.forceAbsPaths()

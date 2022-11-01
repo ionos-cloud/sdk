@@ -44,7 +44,7 @@ export class SdkAssets {
       version: genConfig.version,
       outputDir: genConfig.outputDir,
       httpUserAgent: `ionos-cloud-sdk-${genConfig.sdkName}/v${genConfig.version}`,
-      packageName: 'ionoscloud',
+      packageName: genConfig.packageName,
       repoId: `${genConfig.sdkName}`,
       repoOwner: DEFAULT_REPO_OWNER,
       repo: `https://github.com/${DEFAULT_REPO_OWNER}/${genConfig.sdkName}`,
