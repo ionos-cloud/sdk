@@ -1,3 +1,7 @@
+## 1.2.5
+
+- add `artifactID` optional flag to be able to pass the artifactID
+
 ## 1.2.4
 
 - add `package` optional flag to be able to pass the package along with the sdk name

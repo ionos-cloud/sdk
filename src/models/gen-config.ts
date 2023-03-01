@@ -9,6 +9,7 @@ export class GenConfig {
   build = true
   noCache = false
   packageName = 'ionoscloud'
+  artifactID = ''
 
   public forceAbsPaths() {
     if (!this.assetsDir.startsWith('/')) {

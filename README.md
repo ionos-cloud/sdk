@@ -63,6 +63,7 @@ OPTIONS
   -h, --help                   show CLI help
   -n, --name=name              (required) sdk to build
   -p, --package=packageName    sdk package name
+  -i, --artifactID=artifactID  artifact id
   -o, --output-dir=output-dir  output dir
   -s, --spec=spec              [default: none.json] api spec
   -v, --version=version        [default: 0.0.0] sdk version
@@ -86,6 +87,7 @@ OPTIONS
   -h, --help                   show CLI help
   -n, --name=name              (required) sdk to build
   -p, --package=packageName    sdk package name
+  -i, --artifactID=artifactID  artifact id  
   -o, --output-dir=output-dir  output dir
   -s, --spec=spec              (required) api spec
   -v, --version=version        (required) sdk version

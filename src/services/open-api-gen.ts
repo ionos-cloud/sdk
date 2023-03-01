@@ -50,7 +50,8 @@ export class OpenApiGen {
       '--http-user-agent', vars.get('httpUserAgent'),
       '--git-user-id', vars.get('repoOwner'),
       '--git-repo-id', vars.get('repoId'),
-      '--package-name', vars.get('packageName')
+      '--package-name', vars.get('packageName'),
+      '--artifact-id', vars.get('artifactID')
 
     ]
 
