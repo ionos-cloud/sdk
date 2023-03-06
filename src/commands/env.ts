@@ -30,6 +30,7 @@ export default class Env extends BaseCommand {
     genConfig.specFile = this.flags.spec
     genConfig.sdkName = this.flags.name
     genConfig.packageName = this.flags.package || 'ionoscloud'
+    genConfig.artifactID = this.flags.artifactID
 
     /* convert to absolute paths to avoid errors when changing dirs to run commands */
     genConfig.forceAbsPaths()
