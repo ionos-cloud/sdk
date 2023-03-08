@@ -29,7 +29,7 @@ export default class Generate extends BaseCommand {
 
     genConfig.version = this.flags.version
     genConfig.outputDir = this.flags['output-dir'] || '.'
-    genConfig.assetsDir = this.fFlags['assets-dir'] || '.'
+    genConfig.assetsDir = this.flags['assets-dir'] || '.'
     genConfig.specFile = this.flags.spec
     genConfig.sdkName = this.flags.name
     genConfig.build = this.flags.build
