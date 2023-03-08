@@ -51,7 +51,7 @@ export class OpenApiGen {
       '--git-user-id', vars.get('repoOwner'),
       '--git-repo-id', vars.get('repoId'),
       '--package-name', vars.get('packageName'),
-      '--artifact-id', vars.get('artifactID')
+      '--artifact-id', vars.get('artifactId')
 
     ]
 

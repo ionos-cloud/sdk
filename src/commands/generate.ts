@@ -14,7 +14,7 @@ export default class Generate extends BaseCommand {
     version: flags.string({char: 'v', description: 'sdk version', required: true}),
     name: flags.string({char: 'n', description: 'sdk to build', required: true}),
     package: flags.string({char: 'p', description: 'sdk package name', required: false}),
-    artifactID: flags.string({char: 'i', description: 'artifact id', required: false}),
+    artifactId: flags.string({char: 'i', description: 'artifact id', required: false}),
     'assets-dir': flags.string({char: 'a', description: 'sdk assets directory (templates, scripts etc)'}),
     'output-dir': flags.string({char: 'o', description: 'output dir'}),
     build: flags.boolean({char: 'b', description: 'also build the sdk with the build.sh script', default: true}),
@@ -29,13 +29,13 @@ export default class Generate extends BaseCommand {
 
     genConfig.version = this.flags.version
     genConfig.outputDir = this.flags['output-dir'] || '.'
-    genConfig.assetsDir = this.flags['assets-dir'] || '.'
+    genConfig.assetsDir = this.fFlags['assets-dir'] || '.'
     genConfig.specFile = this.flags.spec
     genConfig.sdkName = this.flags.name
     genConfig.build = this.flags.build
     genConfig.noCache = this.flags['no-cache']
     genConfig.packageName = this.flags.package || 'ionoscloud'
-    genConfig.artifactID = this.flags.artifactID
+    genConfig.artifactId = this.flags.artifactId
 
     /* convert to absolute paths to avoid errors when changing dirs to run commands */
     genConfig.forceAbsPaths()
