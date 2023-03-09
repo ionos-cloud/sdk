@@ -1,6 +1,11 @@
+## 1.2.6
+
+- add `artifactId` optional flag to env cmd also
+
+
 ## 1.2.5
 
-- add `artifactID` optional flag to be able to pass the artifactID
+- add `artifactId` optional flag to be able to pass the artifactId
 
 ## 1.2.4
 
