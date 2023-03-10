@@ -1,3 +1,7 @@
+## 1.2.7
+
+- allow setting `artifactId` and `packageName` from env variables `IONOSSDK_PACKAGE` and `IONOSSDK_ARTIFACTID`
+
 ## 1.2.6
 
 - add `artifactId` optional flag to env cmd also
