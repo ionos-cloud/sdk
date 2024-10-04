@@ -17,7 +17,7 @@ $ npm install -g @ionos-cloud/ionossdk
 $ ionossdk COMMAND
 running command...
 $ ionossdk (-v|--version|version)
-@ionos-cloud/ionossdk/1.2.3 darwin-x64 node-v16.0.0
+@ionos-cloud/ionossdk/1.2.7 linux-x64 node-v22.3.0
 $ ionossdk --help [COMMAND]
 USAGE
   $ ionossdk COMMAND
@@ -47,7 +47,7 @@ OPTIONS
   -h, --help   show CLI help
 ```
 
-_See code: [src/commands/cache.ts](https://github.com/ionos-cloud/ionossdk/blob/v1.2.1/src/commands/cache.ts)_
+_See code: [src/commands/cache.ts](https://github.com/ionos-cloud/ionossdk/blob/v1.2.7/src/commands/cache.ts)_
 
 ## `ionossdk env`
 
@@ -61,15 +61,15 @@ OPTIONS
   -a, --assets-dir=assets-dir  (required) sdk assets directory (templates, scripts etc)
   -d, --debug                  show debug information
   -h, --help                   show CLI help
+  -i, --artifactId=artifactId  artifact id, can be set from env variable IONOSSDK_ARTIFACTID
   -n, --name=name              (required) sdk to build
-  -p, --package=packageName    sdk package name, can be set also from env var IONOSSDK_PACKAGE
-  -i, --artifactId=artifactId  artifact id, can be set from also env var IONOSSDK_ARTIFACTID
   -o, --output-dir=output-dir  output dir
+  -p, --package=package        sdk package name, can be set from env var IONOSSDK_PACKAGE
   -s, --spec=spec              [default: none.json] api spec
   -v, --version=version        [default: 0.0.0] sdk version
 ```
 
-_See code: [src/commands/env.ts](https://github.com/ionos-cloud/ionossdk/blob/v1.2.1/src/commands/env.ts)_
+_See code: [src/commands/env.ts](https://github.com/ionos-cloud/ionossdk/blob/v1.2.7/src/commands/env.ts)_
 
 ## `ionossdk generate`
 
@@ -85,15 +85,15 @@ OPTIONS
   -c, --no-cache               don't use the cache
   -d, --debug                  show debug information
   -h, --help                   show CLI help
+  -i, --artifactId=artifactId  artifact id, can be set from env variable IONOSSDK_ARTIFACTID
   -n, --name=name              (required) sdk to build
-  -p, --package=packageName    sdk package name, can be set also from env var IONOSSDK_PACKAGE
-  -i, --artifactId=artifactId  artifact id, can be set also from env var IONOSSDK_ARTIFACTID
   -o, --output-dir=output-dir  output dir
+  -p, --package=package        sdk package name, can be set from env var IONOSSDK_PACKAGE
   -s, --spec=spec              (required) api spec
   -v, --version=version        (required) sdk version
 ```
 
-_See code: [src/commands/generate.ts](https://github.com/ionos-cloud/ionossdk/blob/v1.2.1/src/commands/generate.ts)_
+_See code: [src/commands/generate.ts](https://github.com/ionos-cloud/ionossdk/blob/v1.2.7/src/commands/generate.ts)_
 
 ## `ionossdk help [COMMAND]`
 
